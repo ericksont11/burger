@@ -1,13 +1,13 @@
 ### Schema
-DROP DATABASE IF EXISTS burgers_db;
-CREATE DATABASE burgers_db;
+DROP DATABASE IF EXISTS orders_db;
+CREATE DATABASE orders_db;
 
-USE burgers_db;
+USE orders_db;
 
-CREATE TABLE burgers
+CREATE TABLE orders
 (
 	id int NOT NULL AUTO_INCREMENT,
-	burger_name varchar(150) NOT NULL,
-    devoured boolean NOT NULL,
+	dish_name varchar(150) NOT NULL,
+    delivered boolean NOT NULL,
 	PRIMARY KEY (id)
 );

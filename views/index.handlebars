@@ -1,8 +1,52 @@
+<nav class="navbar navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">
+    <img src="/assets/img/stand.png" id="icon">
+    Tom's Restaurant
+  </a>
+</nav>
+
+
 <ul>
-  {{#each burgers}}
+  {{#each orders}}
   <li>
-      <p>Burger Name: {{burger_name}}</p>
-      <p>Devoured: {{devoured}}</p>
+      <p>Dish Name: {{dish_name}}</p>
+      <p>Delivered: {{delivered}}</p>
   </li>
   {{/each}}
 </ul>
+
+
+<h2>Add an Order</h2>
+
+<form class="order-form">
+
+    <div class="new-dish">
+        <label for="dish">Dish Name:</label>
+        <input type="text" id="dish" name="name">
+    </div>
+
+    <br>
+
+    <div class="order-status">
+        <label for="status">Order Status</label><br>
+        <input type="radio" name="status" value="0" checked> Being Prepared<br>
+        <input type="radio" name="status" value="1"> Delivered to customer
+    </div>
+
+    <button type="submit">Add Order</button>
+
+</form>
+
+
+
+<footer>
+    <div>
+        Icons made by 
+        <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> 
+        from 
+        <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> 
+        is licensed by 
+        <a href="http://creativecommons.org/licenses/by/3.0/"title="Creative Commons BY 3.0" target="_blank">
+        CC 3.0 BY</a>
+    </div>
+</footer>

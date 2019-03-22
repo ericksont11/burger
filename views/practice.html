@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+		<title>Restaurant Orders</title>
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="/assets/js/order.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+	<body>
+		<nav class="navbar navbar-dark bg-primary">
+            <a class="navbar-brand" href="#">
+              <img src="/assets/img/stand.png" id="icon">
+              Tom's Restaurant
+            </a>
+        </nav>
+
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+        </table>
+
+        
+        <form class="order-form">
+            <div class="new-dish">
+                <label for="dish">Dish Name:</label>
+                <input type="text" id="dish" name="name">
+            </div>
+
+            <br>
+
+            <div class="order-status">
+                <label for="status">Order Status</label><br>
+                <input type="radio" name="status" value="0" checked> Being Prepared<br>
+                <input type="radio" name="status" value="1"> Delivered to customer
+            </div>
+
+            <button type="submit">Add Order</button>
+        </form>
+
+
+
+        <footer>
+            <div>
+                Icons made by 
+                <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> 
+                from 
+                <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> 
+                is licensed by 
+                <a href="http://creativecommons.org/licenses/by/3.0/"title="Creative Commons BY 3.0" target="_blank">
+                CC 3.0 BY</a>
+            </div>
+        </footer>
+    </body>
+</html>

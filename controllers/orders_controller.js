@@ -2,28 +2,28 @@ const express = require('express')
 
 const router = express.Router()
 
-const burger = require('../models/burger.js')
+const order = require('../models/orders.js')
 
 router.get('/', function(req,res){
-    burger.all(function(data){
+    order.all(function(data){
         const handlebars = {
-            burgers : data
+            orders : data
         }
         res.render("index", handlebars)
     })
 })
 
-router.post("/api/burgers", function(req, res) {
-    burger.create(["burger_name", "devoured"], [req.body.name, req.body.devoured], function(result) {
+router.post("/api/orders", function(req, res) {
+    order.create(["dish_name", "delivered"], [req.body.name, req.body.devoured], function(result) {
     
         res.json(result);
     });
 })
 
-router.put("/api/burgers/:id", function(req,res){
+router.put("/api/orders/:id", function(req,res){
     const identifier = "id=" + req.params.id
 
-    burger.update({devoured: req.body.devoured}, identifier, function(result) {
+    order.update({devoured: req.body.devoured}, identifier, function(result) {
         if (result.changedRows == 0) {
             
             return res.status(404).end();
@@ -33,10 +33,10 @@ router.put("/api/burgers/:id", function(req,res){
     })
 })
 
-router.delete("/api/burgers/:id", function(req, res) {
+router.delete("/api/orders/:id", function(req, res) {
     const identifier = "id=" + req.params.id
   
-    burger.delete(identifier, function(result) {
+    order.delete(identifier, function(result) {
       if (result.affectedRows == 0) {
         return res.status(404).end();
       } else {
