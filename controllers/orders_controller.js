@@ -14,7 +14,7 @@ router.get('/', function(req,res){
 })
 
 router.post("/api/orders", function(req, res) {
-    order.create(["dish_name", "delivered"], [req.body.name, req.body.devoured], function(result) {
+    order.create(["dish_name", "delivered"], [req.body.name, req.body.delivered], function(result) {
     
         res.json(result);
     });
@@ -23,10 +23,10 @@ router.post("/api/orders", function(req, res) {
 router.put("/api/orders/:id", function(req,res){
     const identifier = "id=" + req.params.id
 
-    order.update({devoured: req.body.devoured}, identifier, function(result) {
+    order.update({delivered: req.body.delivered}, identifier, function(result) {
         if (result.changedRows == 0) {
-            
-            return res.status(404).end();
+            console.log(result)
+
         } else {
             res.status(200).end();
         }
