@@ -5,9 +5,7 @@
   </a>
 </nav>
 
-
-
-<h2>Select dish from the dropdown menu to begin ordering!</h2>
+<h2>Select a dish from the dropdown menu to begin ordering!</h2>
 
 <form class="order-form">
 
@@ -22,15 +20,14 @@
         <option value="Coffee">Coffee</option>
     </select>
 
-    <br>
+    <br><br>
 
     <div class="order-status">
-        <label for="status">Order Status</label><br>
         <input type="radio" name="status" value="0" checked> First item of order<br>
         <input type="radio" name="status" value="1"> Only item being ordered
     </div>
 
-    <button type="submit">Add Order</button>
+    <button type="submit">Begin Order</button>
 
 </form>
 
@@ -56,7 +53,7 @@
                 {{dish}}
             </td>
             <td>
-                <button type="button" class="btn btn-primary add" data-type="{{id}}">Add</button>
+                <button type="button" class="btn btn-primary add" data-type="{{id}}" >Add</button>
                 <select class="another-dish" id="another-dish{{id}}">
                     <option value="">Add to your order!</option>
                     <option value="Kebab">Kebab</option>
@@ -75,6 +72,15 @@
     {{/each}}
 </table>
 
+<div id="pop-up">
+    <div id="pop-up-header">
+        <p id="pop-head">Sorry!</p>
+    </div>
+    <div id="pop-up-body">
+        <p id="pop-body">You can't edit a dish once your order has been placed, and you can only have five items per order!</p>
+        <button id="continue">Continue</button>
+    </div>
+</div>
 
 
 <footer>

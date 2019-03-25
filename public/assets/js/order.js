@@ -1,7 +1,7 @@
 $(function() {
     
     $(".order-form").on("submit", function(event) {
-
+       
         event.preventDefault();
         if($("#dish").val() !== ""){
             const order = {
@@ -18,14 +18,15 @@ $(function() {
             });
         }
         else {
-            console.log("yes")
+            $("#pop-up").css("visibility", "visible")
         }
     });
 
     $(".add").on("click", function() {
         let id = parseInt($(this).attr("data-type"))
         var dishArray = $("#dish-name"+id).text().trim().split(",")
-        if ($("#another-dish"+id).val() !== "" && dishArray.length < 5) {
+        console.log($("#"+id).text())
+        if ($("#another-dish"+id).val() !== "" && dishArray.length < 5 && $("#"+id).text() !== "Order Placed!") {
             let name = $("#dish-name"+id).text().trim()
             let name2 = $("#another-dish"+id).val()
             var name3 = "'"+name + "," + name2+"'"
@@ -42,7 +43,7 @@ $(function() {
             });
         }
         else {
-            console.log("no")
+            $("#pop-up").css("visibility", "visible")
         }
     });
 
@@ -74,7 +75,7 @@ $(function() {
     });
 
 
-    $(".delete").on("click", function(event) {
+    $(".delete").on("click", function() {
 
         const id = parseInt($(this).attr("id"))
         console.log(id)
@@ -84,6 +85,10 @@ $(function() {
 
             location.reload();
         });
+    });
+
+    $("#continue").on("click", function() {
+        $("#pop-up").css("visibility", "hidden")
     });
 
     $(".btn").css("background-color", "red")
