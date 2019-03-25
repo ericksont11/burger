@@ -7,7 +7,7 @@ USE orders_db;
 CREATE TABLE orders
 (
 	id int NOT NULL AUTO_INCREMENT,
-	dish_name varchar(150) NOT NULL,
+	dish varchar(150) NOT NULL,
     delivered boolean NOT NULL,
 	PRIMARY KEY (id)
 );

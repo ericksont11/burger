@@ -1,20 +1,26 @@
 <nav class="navbar navbar-dark bg-primary">
   <a class="navbar-brand" href="#">
-    <img src="/assets/img/stand.png" id="icon">
+    <img src="/assets/img/stand.png" id="icon" class="icon">
     Tom's Restaurant
   </a>
 </nav>
 
 
 
-<h2>Add an Order</h2>
+<h2>Select dish from the dropdown menu to begin ordering!</h2>
 
 <form class="order-form">
 
-    <div class="new-dish">
-        <label for="dish">Dish Name:</label>
-        <input type="text" id="dish" name="name">
-    </div>
+
+    
+    <select class="new-dish" id="dish">
+        <option value="">Select a dish!</option>
+        <option value="Kebab">Kebab</option>
+        <option value="Fries">Fries</option>
+        <option value="Hamburger">Hamburger</option>
+        <option value="Salad">Salad</option>
+        <option value="Coffee">Coffee</option>
+    </select>
 
     <br>
 
@@ -36,8 +42,9 @@
     <thead class="thead-dark">
         
         <tr>
-            <th scope="col" >#</th>
+            <th scope="col" >#Order Number</th>
             <th scope="col">Dish</th>
+            <th scope="col">Add to order</th>
             <th scope="col">Status</th>
         </tr>
     </thead>
@@ -45,8 +52,19 @@
     <tbody>
         <tr>
             <th scope="row">{{id}}</th>
+            <td id="dish-name{{id}}">
+                {{dish}}
+            </td>
             <td>
-                Dish Name: {{dish_name}}
+                <button type="button" class="btn btn-primary add" data-type="{{id}}">Add</button>
+                <select class="another-dish" id="another-dish{{id}}">
+                    <option value="">Add to your order!</option>
+                    <option value="Kebab">Kebab</option>
+                    <option value="Fries">Fries</option>
+                    <option value="Hamburger">Hamburger</option>
+                    <option value="Salad">Salad</option>
+                    <option value="Coffee">Coffee</option>
+                </select>
             </td>
             <td>
                 <button type="button" class="btn btn-primary clicked" id="{{id}}">Preparing: {{delivered}}</button>

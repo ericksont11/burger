@@ -22,7 +22,7 @@ footer {
     margin-top: 5vh;
 }
 
-#icon {
+.icon {
     height: auto;
     width: 5vw;
 }
@@ -48,5 +48,14 @@ h2 {
 }
 
 form {
-    margin-left:41%
+    text-align: center
+}
+
+#fries {
+    height: auto;
+    width: 2vw
+}
+
+.th {
+    font-size:10vh;
 }
