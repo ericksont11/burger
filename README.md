@@ -6,7 +6,7 @@ An application deployed on heroku at https://tranquil-sands-68529.herokuapp.com/
 
 ## Image of the site
 
-![Screenshot](assets/images/screenshot.png)
+![Screenshot](public/assets/img/showcase.png)
 
 ## Technologies Used
    
