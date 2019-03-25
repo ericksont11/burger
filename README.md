@@ -2,11 +2,11 @@
 
 ## Description
 
-An application deployed on heroku at https://tranquil-sands-68529.herokuapp.com/ that simulates a system for managing online orders. The user can choose from a dropdown menu (used to simulate a restaurant menu) and then add to that order before completing the order.
+An application deployed on heroku at https://tranquil-sands-68529.herokuapp.com/ that simulates a system for managing online orders. The user can choose from a dish from a dropdown menu (used to simulate a restaurant menu). They can add to the order by hitting the "Add" button. And they can complete their order by hitting the button that says "Ordering...". They can also choose to have their order completed after their first item is added if they are only ordering one item.
 
 ## Image of the site
 
-![Screenshot](Images/stand.png)
+![Screenshot](assets/images/screenshot.png)
 
 ## Technologies Used
    
