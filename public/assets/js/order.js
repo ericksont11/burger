@@ -48,23 +48,22 @@ $(function() {
 
     $(".clicked").click(function () {
         var name;
-        var dish='Hamburger'
         var ButtonText = $(this).text()
         let id = parseInt($(this).attr("id"))
         console.log(ButtonText)
-        if (ButtonText === "Preparing") {
+        if (ButtonText === "Ordering...") {
             $(this).css("background-color", "green");
-            $(this).text("Delivered");
+            $(this).text("Order Placed!");
             name = 1
         }
         else {
             $(this).css("background-color", "orange");
-            $(this).text("Preparing");
+            $(this).text("Ordering...");
             name = 0
         }
-        console.log(name)
+
         const newName = {
-            dish: dish,
+            delivered: name,
         }
         $.ajax("/api/orders/" + id, {
             type: "PUT",
@@ -113,11 +112,11 @@ function check() {
             }
             if ($("#"+x).text() ==="Preparing: 0") {
                 $("#"+x).css("background-color", "orange");
-                $("#"+x).text("Preparing");
+                $("#"+x).text("Ordering...");
             }
             else if ($("#"+x).text() ==="Preparing: 1") {
                 $("#"+x).css("background-color", "green");
-                $("#"+x).text("Delivered");
+                $("#"+x).text("Order Placed!");
             }
         }
        
