@@ -52,14 +52,14 @@ $(function() {
         var ButtonText = $(this).text()
         let id = parseInt($(this).attr("id"))
         console.log(ButtonText)
-        if (ButtonText === "Ordering...") {
+        if (ButtonText === "Click to finish order!") {
             $(this).css("background-color", "green");
             $(this).text("Order Placed!");
             name = 1
         }
         else {
             $(this).css("background-color", "orange");
-            $(this).text("Ordering...");
+            $(this).text("Click to finish order!");
             name = 0
         }
 
@@ -117,7 +117,7 @@ function check() {
             }
             if ($("#"+x).text() ==="Preparing: 0") {
                 $("#"+x).css("background-color", "orange");
-                $("#"+x).text("Ordering...");
+                $("#"+x).text("Click to finish order!");
             }
             else if ($("#"+x).text() ==="Preparing: 1") {
                 $("#"+x).css("background-color", "green");
