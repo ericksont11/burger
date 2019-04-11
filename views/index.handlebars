@@ -16,67 +16,67 @@
 <div class="row">
       <figure class="col-md-1">
         <a class="black-text">
-          <img alt="picture" src="assets/img/hamburger.png" class="img-fluid order" id="Hamburger">
+          <img alt="picture" src="assets/img/hamburger.png" class="img-fluid order" id="Hamburger" data-toggle="modal" data-target="#exampleModalCenter">
           <h5 class="text-center my-3">Hamburger</h5>
         </a>
       </figure>
       <figure class="col-md-1">
         <a class="black-text">
-          <img alt="picture" src="assets/img/fries.png" class="img-fluid order" id="Fries">
+          <img alt="picture" src="assets/img/fries.png" class="img-fluid order" id="Fries" data-toggle="modal" data-target="#exampleModalCenter">
           <h5 class="text-center my-3">Fries</h5>
         </a>
       </figure>
       <figure class="col-md-1">
         <a class="black-text">
-          <img alt="picture" src="assets/img/salad.png" class="img-fluid order" id="Salad">
+          <img alt="picture" src="assets/img/salad.png" class="img-fluid order" id="Salad" data-toggle="modal" data-target="#exampleModalCenter">
           <h5 class="text-center my-3">Salad</h5>
         </a>
       </figure>
       <figure class="col-md-1">
         <a class="black-text">
-          <img alt="picture" src="assets/img/coffee.png" class="img-fluid order" id="Coffee">
+          <img alt="picture" src="assets/img/coffee.png" class="img-fluid order" id="Coffee" data-toggle="modal" data-target="#exampleModalCenter">
           <h5 class="text-center my-3">Coffee</h5>
         </a>
       </figure>
       <figure class="col-md-1">
         <a class="black-text">
-          <img alt="picture" src="assets/img/kebab.png" class="img-fluid order" id="Kebab">
+          <img alt="picture" src="assets/img/kebab.png" class="img-fluid order" id="Kebab" data-toggle="modal" data-target="#exampleModalCenter">
           <h5 class="text-center my-3">Kebab</h5>
         </a>
       </figure>
       <figure class="col-md-1">
         <a class="black-text">
-          <img alt="picture" src="assets/img/gyro.png" class="img-fluid order" id="Gyro">
+          <img alt="picture" src="assets/img/gyro.png" class="img-fluid order" id="Gyro" data-toggle="modal" data-target="#exampleModalCenter">
           <h5 class="text-center my-3">Gyro</h5>
         </a>
       </figure>
       <figure class="col-md-1">
         <a class="black-text">
-          <img alt="picture" src="assets/img/hotdog.png" class="img-fluid order" id="Hotdog">
+          <img alt="picture" src="assets/img/hotdog.png" class="img-fluid order" id="Hotdog" data-toggle="modal" data-target="#exampleModalCenter">
           <h5 class="text-center my-3">Hot-dog</h5>
         </a>
       </figure>
       <figure class="col-md-1">
         <a class="black-text">
-          <img alt="picture" src="assets/img/icecream.png" class="img-fluid order" id="Icecream">
+          <img alt="picture" src="assets/img/icecream.png" class="img-fluid order" id="Icecream" data-toggle="modal" data-target="#exampleModalCenter">
           <h5 class="text-center my-3">Ice Cream</h5>
         </a>
       </figure>
       <figure class="col-md-1">
         <a class="black-text">
-          <img alt="picture" src="assets/img/pizza.png" class="img-fluid order" id="Pizza">
+          <img alt="picture" src="assets/img/pizza.png" class="img-fluid order" id="Pizza" data-toggle="modal" data-target="#exampleModalCenter">
           <h5 class="text-center my-3">Pizza Slice</h5>
         </a>
       </figure>
       <figure class="col-md-1">
         <a class="black-text">
-          <img alt="picture" src="assets/img/sandwich.png" class="img-fluid order" id="Sandwich">
+          <img alt="picture" src="assets/img/sandwich.png" class="img-fluid order" id="Sandwich" data-toggle="modal" data-target="#exampleModalCenter">
           <h5 class="text-center my-3">Club Sandwich</h5>
         </a>
       </figure>
       <figure class="col-md-1">
         <a class="black-text">
-          <img alt="picture" src="assets/img/soda.png" class="img-fluid order" id="Soda">
+          <img alt="picture" src="assets/img/soda.png" class="img-fluid order" id="Soda" data-toggle="modal" data-target="#exampleModalCenter">
           <h5 class="text-center my-3">Soda</h5>
         </a>
       </figure>
@@ -88,6 +88,36 @@
 <br>
 <br>
 
+<button id="hello" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul>
+        {{#each ingredients}}
+          <li>
+          {{name}}
+          </li>
+        {{/each}}
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="add-to-order" data-dismiss="modal">Add to Order</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <table class="table table-hover">
 
@@ -149,3 +179,8 @@
         CC 3.0 BY</a>
     </div>
 </footer>
+
+<script>
+
+
+</script>

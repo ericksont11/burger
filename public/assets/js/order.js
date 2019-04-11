@@ -1,9 +1,14 @@
 $(function() {
+
     counter = 0
     orderArray = []
     $(".order").on("click", function(event) {
+        $(".modal-title").text(this.id)
+    });
+
+    $("#add-to-order").on("click", function(event) {
         if (counter < 15){
-            const food = this.id.toLowerCase()
+            const food = $(".modal-title").text().toLowerCase()
             $('#items').prepend('<img src="/assets/img/'+food+'.png" class="small-icon" style="z-index:"'+counter+'/>')
             counter++
             orderArray.push(this.id)
