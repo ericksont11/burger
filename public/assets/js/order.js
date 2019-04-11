@@ -1,5 +1,16 @@
 $(function() {
-    
+    counter = 0
+    orderArray = []
+    $(".order").on("click", function(event) {
+        if (counter < 15){
+            const food = this.id
+            $('#items').prepend('<img src="/assets/img/'+food+'.png" class="small-icon" style="z-index:"'+counter+'/>')
+            counter++
+            orderArray.push(food)
+        }
+        console.log(orderArray)
+    });
+
     $(".order-form").on("submit", function(event) {
        
         event.preventDefault();

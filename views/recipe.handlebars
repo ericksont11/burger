@@ -1,0 +1,16 @@
+
+ 
+
+<ul class="collection with-header">
+    <li class="collection-header"><h4>Instructions</h4></li>
+    {{#each comments}}
+    <li class="collection-item">
+        <span class="title">Step {{@index}}</span>
+        <p>
+            {{dish}}
+        </p>
+    </li>
+    {{/each}}
+
+</ul>
+

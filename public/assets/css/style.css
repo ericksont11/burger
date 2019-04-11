@@ -53,11 +53,6 @@ form {
     text-align: center;
 }
 
-#fries {
-    height: auto;
-    width: 2vw
-}
-
 .th {
     font-size:10vh;
 }
@@ -108,3 +103,25 @@ form {
     width: 40vw;
 }
 
+#tray {
+    width: 20vw;
+    height: 35vh;
+    margin-left: 40vw;
+    background-image: url('../img/tray.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#items {
+    padding: 7vh 2vw 1vh 2vw
+}
+
+.small-icon {
+    height: auto;
+    width: 3vw;
+}
+
+
+.text-center {
+    text-align: center !important;
+}
