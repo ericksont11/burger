@@ -11,6 +11,10 @@ body {
     position: relative;
 }
 
+#submit {
+    width: 20vw;
+    margin-left: 40vw;
+}
 
 footer {
     background-color: #007bff;

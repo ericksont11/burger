@@ -8,16 +8,15 @@ $(function() {
             counter++
             orderArray.push(food)
         }
-        console.log(orderArray)
     });
 
-    $(".order-form").on("submit", function(event) {
-       
-        event.preventDefault();
-        if($("#dish").val() !== ""){
+    $("#submit").on("click", function(event) {
+        if (orderArray.length > 0) {
+            event.preventDefault();
+            const name = orderArray.join()
             const order = {
-                name: $("#dish").val(),
-                delivered: $("[name=status]:checked").val().trim()
+                name: name,
+                delivered: 1
             };
 
             $.ajax("/api/orders", {
@@ -27,9 +26,6 @@ $(function() {
                 location.reload();
                 check()
             });
-        }
-        else {
-            $("#pop-up").css("visibility", "visible")
         }
     });
 
@@ -124,6 +120,24 @@ function check() {
                 $('#dish-name'+x).prepend('<img src="/assets/img/fries.png" class="icon"/>')
             }
             else if (dishArray[y] === "Kebab") {
+                $('#dish-name'+x).prepend('<img src="/assets/img/kebab.png" class="icon"/>')
+            }
+            else if (dishArray[y] === "Gyro") {
+                $('#dish-name'+x).prepend('<img src="/assets/img/gyro.png" class="icon"/>')
+            }
+            else if (dishArray[y] === "Hotdog") {
+                $('#dish-name'+x).prepend('<img src="/assets/img/hotdog.png" class="icon"/>')
+            }
+            else if (dishArray[y] === "Icecream") {
+                $('#dish-name'+x).prepend('<img src="/assets/img/icecream.png" class="icon"/>')
+            }
+            else if (dishArray[y] === "Sandwich") {
+                $('#dish-name'+x).prepend('<img src="/assets/img/sandwich.png" class="icon"/>')
+            }
+            else if (dishArray[y] === "Pizza") {
+                $('#dish-name'+x).prepend('<img src="/assets/img/pizza.png" class="icon"/>')
+            }
+            else if (dishArray[y] === "Soda") {
                 $('#dish-name'+x).prepend('<img src="/assets/img/kebab.png" class="icon"/>')
             }
             if ($("#"+x).text() ==="Preparing: 0") {
