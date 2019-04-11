@@ -2,8 +2,44 @@ $(function() {
 
     counter = 0
     orderArray = []
-    $(".order").on("click", function(event) {
+    $(".order").on("click", function() {
         $(".modal-title").text(this.id)
+        if (this.id === "Icecream") {
+            $(".icecream").css("display","block")
+            console.log("yes")
+        }
+        if (this.id === "Gyro") {
+            $(".gyro").css("display","block")
+        }
+        if (this.id === "Hamburger") {
+            $(".hamburger").css("display","block")
+        }
+        if (this.id === "Pizza") {
+            $(".pizza").css("display","block")
+        }
+        if (this.id === "Salad") {
+            $(".salad").css("display","block")
+        }
+        if (this.id === "Fries") {
+            $(".fries").css("display","block")
+        }
+        if (this.id === "Kebab") {
+            $(".kebab").css("display","block")
+        }
+        if (this.id === "Sandwich") {
+            $(".sandwich").css("display","block")
+        }
+    });
+
+    $(".close-modal").on("click", function() {
+        $(".icecream").css("display","none")
+        $(".gyro").css("display","none")
+        $(".sandwich").css("display","none")
+        $(".salad").css("display","none")
+        $(".fries").css("display","none")
+        $(".kebab").css("display","none")
+        $(".hamburger").css("display","none")
+        $(".pizza").css("display","none")
     });
 
     $("#add-to-order").on("click", function(event) {

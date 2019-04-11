@@ -142,3 +142,11 @@ form {
 i {
     color:#007BFF
 }
+
+.icecream, .gyro, .pizza,
+.salad, .sandwich, .kebab,
+.fries, .hamburger
+ {
+    display: none;
+}
+
