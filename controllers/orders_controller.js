@@ -9,13 +9,7 @@ const ingredient = require('../models/ingredients.js')
 
 router.get('/', function(req,res){
     ingredient.all(function(data1){
-        var ingredient = {
-            ingredients : data1
-        }
         order.all(function(data){
-            var handlebars = {
-                orders : data
-            }
             const obj = {
                 orders : data,
                 ingredients : data1
