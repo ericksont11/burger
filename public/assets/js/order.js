@@ -6,7 +6,7 @@ $(function() {
             const food = this.id.toLowerCase()
             $('#items').prepend('<img src="/assets/img/'+food+'.png" class="small-icon" style="z-index:"'+counter+'/>')
             counter++
-            orderArray.push(food)
+            orderArray.push(this.id)
         }
     });
 
