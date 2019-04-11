@@ -29,6 +29,15 @@ $(function() {
         if (this.id === "Sandwich") {
             $(".sandwich").css("display","block")
         }
+        if (this.id === "Hotdog") {
+            $(".hotdog").css("display","block")
+        }
+        if (this.id === "Soda") {
+            $(".soda").css("display","block")
+        }
+        if (this.id === "Coffee") {
+            $(".coffee").css("display","block")
+        }
     });
 
     $(".close-modal").on("click", function() {
@@ -40,6 +49,9 @@ $(function() {
         $(".kebab").css("display","none")
         $(".hamburger").css("display","none")
         $(".pizza").css("display","none")
+        $(".soda").css("display","none")
+        $(".coffee").css("display","none")
+        $(".hotdog").css("display","none")
     });
 
     $("#add-to-order").on("click", function(event) {
@@ -47,7 +59,7 @@ $(function() {
             let food = $(".modal-title").text()
             orderArray.push(food)
             food = food.toLowerCase()
-            $('#items').prepend('<img src="/assets/img/'+food+'.png" class="small-icon" style="z-index:"'+counter+'/>')
+            $('#items').prepend('<img src="/assets/img/'+food+'.png" class="small-icon"/>')
             counter++
         }
     });

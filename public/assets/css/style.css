@@ -111,7 +111,7 @@ form {
     width: 20vw;
     height: 35vh;
     margin-left: 40vw;
-    background-image: url('../img/tray.png');
+    background-color: gray;
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -145,8 +145,8 @@ i {
 
 .icecream, .gyro, .pizza,
 .salad, .sandwich, .kebab,
-.fries, .hamburger
- {
-    display: none;
+.fries, .hamburger, .soda,
+.coffee, .hotdog {
+   display: none;
 }
 
