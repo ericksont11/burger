@@ -1,28 +1,27 @@
 const orm = require("../config/orm.js");
 
-const comments = {
+const ingredient = {
   all: function(cb) {
-    orm.all("comments", function(res) {
+    orm.all("ingredients", function(res) {
       cb(res);
     });
   },
-
   create: function(cols, vals, cb) {
-    orm.create("comments", cols, vals, function(res) {
+    orm.create("ingredients", cols, vals, function(res) {
       cb(res);
     });
   },
   update: function(objColVals, condition, cb) {
-    orm.update("comments", objColVals, condition, function(res) {
+    orm.update("ingredients", objColVals, condition, function(res) {
       cb(res);
     });
   },
   delete: function(condition, cb) {
-    orm.delete("comments", condition, function(res) {
+    orm.delete("ingredients", condition, function(res) {
       cb(res);
     });
   }
 };
 
 
-module.exports = comments;
+module.exports = ingredient;

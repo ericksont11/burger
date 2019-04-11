@@ -8,10 +8,11 @@ $(function() {
 
     $("#add-to-order").on("click", function(event) {
         if (counter < 15){
-            const food = $(".modal-title").text().toLowerCase()
+            let food = $(".modal-title").text()
+            orderArray.push(food)
+            food = food.toLowerCase()
             $('#items').prepend('<img src="/assets/img/'+food+'.png" class="small-icon" style="z-index:"'+counter+'/>')
             counter++
-            orderArray.push(this.id)
         }
     });
 

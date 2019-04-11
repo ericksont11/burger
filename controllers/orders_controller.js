@@ -2,14 +2,27 @@ const express = require('express')
 
 const router = express.Router()
 
-const order = require('../models/orders.js')
+const order = require('../models/order.js')
+
+const ingredient = require('../models/ingredients.js')
+
 
 router.get('/', function(req,res){
-    order.all(function(data){
-        const handlebars = {
-            orders : data
+    ingredient.all(function(data1){
+        var ingredient = {
+            ingredients : data1
         }
-        res.render("index", handlebars)
+        order.all(function(data){
+            var handlebars = {
+                orders : data
+            }
+            const obj = {
+                orders : data,
+                ingredients : data1
+            }
+            console.log(obj)
+            res.render("index", obj)
+        })
     })
 })
 
