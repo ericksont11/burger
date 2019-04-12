@@ -1,15 +1,30 @@
  <div class="modal-body gyro">
+    <h3>Meats</h3>
     {{#each ingredients}}
-    <p>
-    {{#if gyro}}
-        <i class="material-icons">add_circle</i>
-        {{name}}
-    {{/if}}
-    </p>
+        <p>
+            {{#if gyro}}
+                {{#if meats}}
+                    <i class="material-icons">add_circle</i>
+                    {{name}}
+                {{/if}}
+            {{/if}}
+        </p>
+    {{/each}}
+    <h3>Vegetables</h3>
+    {{#each ingredients}}
+        <p>
+            {{#if gyro}}
+                {{#if vegetables}}
+                    <i class="material-icons">add_circle</i>
+                    {{name}}
+                {{/if}}
+            {{/if}}
+        </p>
     {{/each}}
 </div>
 
 <div class="modal-body icecream">
+    <h1>Flavors</h1>
     {{#each ingredients}}
     <p>
     {{#if icecream}}
@@ -21,72 +36,201 @@
 </div>
 
 <div class="modal-body pizza">
+    <h3>Meats</h3>
     {{#each ingredients}}
-    <p>
-    {{#if pizza}}
-        <i class="material-icons">add_circle</i>
-        {{name}}
-    {{/if}}
-    </p>
+        <p>
+            {{#if pizza}}
+                {{#if meats}}
+                    <i class="material-icons">add_circle</i>
+                    {{name}}
+                {{/if}}
+            {{/if}}
+        </p>
+    {{/each}}
+    <h3>Vegetables</h3>
+    {{#each ingredients}}
+        <p>
+            {{#if pizza}}
+                {{#if vegetables}}
+                    <i class="material-icons">add_circle</i>
+                    {{name}}
+                {{/if}}
+            {{/if}}
+        </p>
+    {{/each}}
+    <h3>Other Toppings</h3>
+    {{#each ingredients}}
+        <p>
+            {{#if pizza}}
+                {{#if otherToppings}}
+                    <i class="material-icons">add_circle</i>
+                    {{name}}
+                {{/if}}
+            {{/if}}
+        </p>
     {{/each}}
 </div>
 
 <div class="modal-body sandwich">
+    <h3>Meats</h3>
     {{#each ingredients}}
-    <p>
-    {{#if sandwich}}
-        <i class="material-icons">add_circle</i>
-        {{name}}
-    {{/if}}
-    </p>
+        <p>
+            {{#if sandwich}}
+                {{#if meats}}
+                    <i class="material-icons">add_circle</i>
+                    {{name}}
+                {{/if}}
+            {{/if}}
+        </p>
+    {{/each}}
+    <h3>Vegetables</h3>
+    {{#each ingredients}}
+        <p>
+            {{#if sandwich}}
+                {{#if vegetables}}
+                    <i class="material-icons">add_circle</i>
+                    {{name}}
+                {{/if}}
+            {{/if}}
+        </p>
+    {{/each}}
+    <h3>Other Toppings</h3>
+    {{#each ingredients}}
+        <p>
+            {{#if sandwich}}
+                {{#if otherToppings}}
+                    <i class="material-icons">add_circle</i>
+                    {{name}}
+                {{/if}}
+            {{/if}}
+        </p>
     {{/each}}
 </div>
 
 <div class="modal-body kebab">
+    <h3>Meats</h3>
     {{#each ingredients}}
         <p>
-    {{#if kebab}}
-        <i class="material-icons">add_circle</i>
-        {{name}}
-    {{/if}}
-    </p>
+            {{#if kebab}}
+                {{#if meats}}
+                    <i class="material-icons">add_circle</i>
+                    {{name}}
+                {{/if}}
+            {{/if}}
+        </p>
+    {{/each}}
+    <h3>Vegetables</h3>
+    {{#each ingredients}}
+        <p>
+            {{#if kebab}}
+                {{#if vegetables}}
+                    <i class="material-icons">add_circle</i>
+                    {{name}}
+                {{/if}}
+            {{/if}}
+        </p>
     {{/each}}
 </div>
 
 <div class="modal-body salad">
+    <h3>Meats</h3>
     {{#each ingredients}}
-    <p>
-    {{#if salad}}
-        <i class="material-icons">add_circle</i>
-        {{name}}
-    {{/if}}
-    </p>
+        <p>
+            {{#if salad}}
+                {{#if meats}}
+                    <i class="material-icons">add_circle</i>
+                    {{name}}
+                {{/if}}
+            {{/if}}
+        </p>
+    {{/each}}
+    <h3>Vegetables</h3>
+    {{#each ingredients}}
+        <p>
+            {{#if salad}}
+                {{#if vegetables}}
+                    <i class="material-icons">add_circle</i>
+                    {{name}}
+                {{/if}}
+            {{/if}}
+        </p>
+    {{/each}}
+    <h3>Other Toppings</h3>
+    {{#each ingredients}}
+        <p>
+            {{#if salad}}
+                {{#if otherToppings}}
+                    <i class="material-icons">add_circle</i>
+                    {{name}}
+                {{/if}}
+            {{/if}}
+        </p>
     {{/each}}
 </div>
 
 <div class="modal-body hamburger">
+    <h3>Meats</h3>
     {{#each ingredients}}
-    <p>
-    {{#if hamburger}}
-        <i class="material-icons">add_circle</i>
-        {{name}}
-    {{/if}}
-    </p>
+        <p>
+            {{#if hamburger}}
+                {{#if meats}}
+                    <i class="material-icons">add_circle</i>
+                    {{name}}
+                {{/if}}
+            {{/if}}
+        </p>
+    {{/each}}
+    <h3>Vegetables</h3>
+    {{#each ingredients}}
+        <p>
+            {{#if hamburger}}
+                {{#if vegetables}}
+                    <i class="material-icons">add_circle</i>
+                    {{name}}
+                {{/if}}
+            {{/if}}
+        </p>
+    {{/each}}
+    <h3>Other Toppings</h3>
+    {{#each ingredients}}
+        <p>
+            {{#if hamburger}}
+                {{#if otherToppings}}
+                    <i class="material-icons">add_circle</i>
+                    {{name}}
+                {{/if}}
+            {{/if}}
+        </p>
     {{/each}}
 </div>
 
 <div class="modal-body fries">
+    <h3>Meats</h3>
     {{#each ingredients}}
-    <p>
-    {{#if fries}}
-        <i class="material-icons">add_circle</i>
-        {{name}}
-    {{/if}}
-    </p>
+        <p>
+            {{#if fries}}
+                {{#if meats}}
+                    <i class="material-icons">add_circle</i>
+                    {{name}}
+                {{/if}}
+            {{/if}}
+        </p>
+    {{/each}}
+    <h3>Other Toppings</h3>
+    {{#each ingredients}}
+        <p>
+            {{#if fries}}
+                {{#if otherToppings}}
+                    <i class="material-icons">add_circle</i>
+                    {{name}}
+                {{/if}}
+            {{/if}}
+        </p>
     {{/each}}
 </div>
 
 <div class="modal-body soda">
+    <h1>Options</h1>
     {{#each ingredients}}
     <p>
     {{#if soda}}
@@ -98,17 +242,43 @@
 </div>
 
 <div class="modal-body hotdog">
+    <h3>Meats</h3>
     {{#each ingredients}}
-    <p>
-    {{#if hotdog}}
-        <i class="material-icons">add_circle</i>
-        {{name}}
-    {{/if}}
-    </p>
+        <p>
+            {{#if hotdog}}
+                {{#if meats}}
+                    <i class="material-icons">add_circle</i>
+                    {{name}}
+                {{/if}}
+            {{/if}}
+        </p>
+    {{/each}}
+    <h3>Vegetables</h3>
+    {{#each ingredients}}
+        <p>
+            {{#if hotdog}}
+                {{#if vegetables}}
+                    <i class="material-icons">add_circle</i>
+                    {{name}}
+                {{/if}}
+            {{/if}}
+        </p>
+    {{/each}}
+    <h3>Other Toppings</h3>
+    {{#each ingredients}}
+        <p>
+            {{#if hotdog}}
+                {{#if otherToppings}}
+                    <i class="material-icons">add_circle</i>
+                    {{name}}
+                {{/if}}
+            {{/if}}
+        </p>
     {{/each}}
 </div>
 
 <div class="modal-body coffee">
+    <h1>Temperature</h1>
     {{#each ingredients}}
     <p>
     {{#if coffee}}
