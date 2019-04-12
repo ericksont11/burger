@@ -59,7 +59,7 @@ $(function() {
             let food = $(".modal-title").text()
             orderArray.push(food)
             food = food.toLowerCase()
-            $('#items').prepend('<img src="/assets/img/'+food+'.png" class="small-icon"/>')
+            $('#items').append('<img src="/assets/img/'+food+'.png" class="small-icon"/>')
             counter++
         }
     });
