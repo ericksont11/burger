@@ -16,6 +16,10 @@ body {
     margin-left: 40vw;
 }
 
+.material-icons {
+    cursor: pointer
+}
+
 .navbar {
     position: fixed;
     top: 0;
