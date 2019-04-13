@@ -2,6 +2,17 @@ $(function() {
 
     counter = 0
     orderArray = []
+    ingredientArray= []
+
+
+    $(document).on("click", ".add-ingredient", function(){
+        const ingredient = $(this).attr("data_value")
+        ingredientArray.push(ingredient)
+        console.log(ingredientArray)
+        $(".ingredients-added").append("<p><i class='material-icons'>add_circle</i>"+ingredient+"</p>")
+        
+    })
+
     $(".order").on("click", function() {
         $(".modal-title").text(this.id)
         if (this.id === "Icecream") {
@@ -52,6 +63,7 @@ $(function() {
         $(".soda").css("display","none")
         $(".coffee").css("display","none")
         $(".hotdog").css("display","none")
+        $(".ingredients-added").empty()
     });
 
     $("#add-to-order").on("click", function(event) {

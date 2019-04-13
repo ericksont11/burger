@@ -131,7 +131,18 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      {{> ingredients}}
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-6">
+            {{> ingredients}}
+          </div>
+          <div class="col-6">
+            <h3>Your Ingredients</h3>
+              <div class="modal-body ingredients-added">
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary close-modal" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary close-modal" id="add-to-order" data-dismiss="modal">Add to Order</button>
