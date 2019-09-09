@@ -19,6 +19,8 @@ An application deployed on heroku at https://tranquil-sands-68529.herokuapp.com/
    * HTML
    
 The main purpose of this project is to show proficiency in using RESTful APIs, CRUD operations, and using MVC framework.
+
+Working on rebuilding using React with Redux
    
   
    
